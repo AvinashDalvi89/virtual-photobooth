@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" href="index.css">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js">
+
+</script>
+<script src="canvas2image.js" ></script>
+  </head>
+  <body>
+    <div class="header">
+        <a href="#default" class="logo"><img src="images/Virtual-PhotoBooth-transparent.png"></a>
+      </div>
+    <div class="aligncenter">
+        <h2>Click me & Frame me!</h2>
+    </div>
+    <div class="container-fluid ">
+        <div class="row" style="margin-top: 98px;">
+          <div class="col-md col-xs-12">
+            <div class="framebg pure-img">
+              
+                <video id="video" width="200" height="200" autoplay></video> 
+              </div>
+          </div>
+          <div class="col-md col-xs-12">
+            <button id="start-camera">Start Camera</button>
+            <button id="click-photo">Click Photo</button>
+            <button onclick="takeshot()">
+                Take Screenshot
+            </button>
+          </div>
+          <div class="col-md col-xs-12" id="photoframe">
+            <div class="framebg pure-img">
+                <canvas id="canvas" width="200" height="200" class="galleryImage"></canvas>
+              </div>
+          </div>
+        </div>
+      </div>
+ 
+
+
+
+    <script type="text/javascript" src="index.js"></script>
+
+  </body>
+</html>
