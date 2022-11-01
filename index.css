@@ -18,10 +18,10 @@ body {
 }
 
 .framebg{
-  background: url('images/attending2.jpg') no-repeat;
+  background: url('images/acdindia_booth.png') no-repeat;
   background-repeat: no-repeat; 
   background-size: 100% 100%; 
-  height: 100vh;
+  height: 550px;
   width: 100%;
 }
 /* Style the header links */
@@ -39,17 +39,25 @@ body {
 .header .logo-block{
   float: left;
 }
-video{
-  border-radius: 50%;
-object-fit: cover;
-margin-top: 100px;
-margin-left: 112px;
+video{ 
+  object-fit: cover;
+  margin-top: 82px;
+  margin-left: 77px;
+  padding: 10px; 
+  z-index: 10;
+  cursor: move;
+  width: 418px;
+  height: 412px;
 }
 #canvas{
-  border-radius: 50%;
   object-fit: cover;
-  margin-top: 100px;
-margin-left: 112px;
+  margin-top: 82px;
+  margin-left: 77px;
+  padding: 10px; 
+  z-index: 10;
+  cursor: move;
+  width: 418px;
+  height: 412px;
 }
 
 /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
@@ -93,9 +101,14 @@ margin-left: 112px;
   margin-top: 10px;
 }
  
-
+#drag-camera{
+  position: absolute;
+  z-index: 9; 
+  text-align: center;
+}
  
 .camera{
+
   margin-left: 34px;
 }
 /* Responsive layout - makes a two column-layout instead of four columns */
