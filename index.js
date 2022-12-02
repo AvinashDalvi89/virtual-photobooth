@@ -79,6 +79,7 @@ previousItem.addEventListener('click', showPreviousItem);
 $(document).ready(function(){
     $('.frame').click(function(){
         var imagePath = $(this).attr('src');
+        $('.framebg').css({"background-image": "url(" + imagePath + ")"});   
         $('.card').css({"background-image": "url(" + imagePath + ")"});   
        });
 });

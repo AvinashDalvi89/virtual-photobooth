@@ -1,136 +1,117 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Virtual Photobooth | Click me & frame me !</title>
-<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-<script type="text/javascript" src="canvas2image.js" ></script>
-<link rel="stylesheet" href="index.css">
-</head>
-<body>
-
- 
-<!-- Header -->
-<div class="header" id="header">
-  <div id="logo" class="me-auto">
-    <a href="index.html" class="scrollto"><img src="images/VP-logo-transparent.png" alt="" title=""></a>
-  </div>
-  <p>Click me & Frame me!</p>
-</div>
-
-<!-- Navigation Bar -->
-<div class="navbar" style="height: 10px;">
-  
-</div>
-
-<!-- The flexible grid (content) -->
-<div class="row">
-  <div class="side guide">
-    <h2>How to use ?</h2> 
-    <div class="stepper-wrapper">
-      <div class="stepper-item completed">
-        <div class="step-counter">1</div>
-        <div class="step-name">Select your frame first</div>
+   <head>
+      <title>Virtual Photobooth | Click me & frame me !</title>
+      <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+      <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+      <script type="text/javascript" src="canvas2image.js" ></script>
+      <link rel="stylesheet" href="index.css">
+   </head>
+   <body>
+      <!-- Header -->
+      <div class="header" id="header">
+         <div id="logo" class="me-auto">
+            <a href="index.html" class="scrollto"><img src="images/VP-logo-transparent.png" alt="" title=""></a>
+         </div>
+         <p>Click me & Frame me!</p>
       </div>
-      <div class="stepper-item completed">
-        <div class="step-counter">2</div>
-        <div class="step-name">Adjust your camera in right position</div>
+      <!-- Navigation Bar -->
+      <div class="navbar" style="height: 10px;">
       </div>
-      <div class="stepper-item completed">
-        <div class="step-counter">3</div>
-        <div class="step-name">Capture photo</div>
-      </div>
-      <div class="stepper-item completed">
-        <div class="step-counter">4</div>
-        <div class="step-name">Review it & download</div>
-      </div>
-    </div>
- 
-  </div>
-  <div class="main">
-    <div class="row">
-    <div class="column">
-      <h2 style="text-align: center">Select your frame</h2>
-     
-      <div class="slider">
-        <img class="active frame" src="images/photobooth_1.png"  >
-        <img class="frame" src="images/photobooth_frame.png">
-        ...
-      </div>
-      <nav class="slider-nav">
-        <ul>
-          <li class="arrow">
-            <a class="previous">
-              <span>
-                <
-              </span>
-            </a>
-          </li>
-          <li class="arrow">
-            <a class="next">
-              <span>
-                >
-              </span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-   
-  
-    
-        <div class="column clickframe" >
-          <h2>Click your photo with frame</h2> 
-            <div class="framebg cardwp" id="card1">
-                    
-              <div class="card-body"> 
-                  <video id="video" width="320" height="240" autoplay></video>
-              </div>
-              
+      <!-- The flexible grid (content) -->
+      <div class="row">
+         <div class="side guide">
+            <h2>How to use ?</h2>
+            <div class="stepper-wrapper">
+               <div class="stepper-item completed">
+                  <div class="step-counter">1</div>
+                  <div class="step-name">Select your frame first</div>
+               </div>
+               <div class="stepper-item completed">
+                  <div class="step-counter">2</div>
+                  <div class="step-name">Adjust your camera in right position</div>
+               </div>
+               <div class="stepper-item completed">
+                  <div class="step-counter">3</div>
+                  <div class="step-name">Capture photo</div>
+               </div>
+               <div class="stepper-item completed">
+                  <div class="step-counter">4</div>
+                  <div class="step-name">Review it & download</div>
+               </div>
             </div>
-          <button id="start-camera" style="display: none;">Start Camera</button>
-          <button class="button" id="click-photo" "="">Click Photo</button>
-        </div>
-        <div class="column viewframe">
-          <h2>Review & download photo</h2> 
-          <div id="bnophoto">
-                
-            <div class="card cardwop"  id="photoframe" crossorigin="anonymous">
-            
-              <div class="card-body">  
-                  <canvas id="canvas" width="320" height="240"  class="galleryImage"></canvas>
-              </div>
+         </div>
+      </div>
+      
+        <div class="main">
+            <div class="row">
+               <div class="column">
+                  <h2 style="text-align: center">Select your frame</h2>
+                  <div class="slider">
+                     <img class="active frame" src="images/1.png"  >
+                     <img class="frame" src="images/2.png">
+                     ...
+                  </div>
+                  <nav class="slider-nav">
+                     <ul>
+                        <li class="arrow">
+                           <a class="previous">
+                           <span>
+                           <
+                           </span>
+                           </a>
+                        </li>
+                        <li class="arrow">
+                           <a class="next">
+                           <span>
+                           >
+                           </span>
+                           </a>
+                        </li>
+                     </ul>
+                  </nav>
+               </div>
+               <div class="column clickframe" >
+                  <h2>Click your photo with frame</h2>
+                  <div class="framebg cardwp" id="card1">
+                     <div class="card-body">
+                        <video id="video" width="320" height="240" autoplay></video>
+                     </div>
+                  </div>
+                  <button id="start-camera" style="display: none;">Start Camera</button>
+                  <button class="button" id="click-photo" "="">Click Photo</button>
+               </div>
+               <div class="column viewframe">
+                  <h2>Review & download photo</h2>
+                  <div id="bnophoto">
+                     <div class="card cardwop"  id="photoframe" crossorigin="anonymous">
+                        <div class="card-body">
+                           <canvas id="canvas" width="320" height="240"  class="galleryImage"></canvas>
+                        </div>
+                     </div>
+                     <div>
+                        <button class="button" id="take-shot" onclick="takeshot()">
+                        Download
+                        </button>
+                     </div>
+                  </div>
+               </div>
             </div>
-            <div>
-              <button class="button" id="take-shot" onclick="takeshot()">
-                  Download
-              </button>
-            </div>
-          </div>
-        </div>
-   
-  
-  
-  
-    </div>
-    <p style="text-align: center;">
-      This virtual photo booth can customised. Work is in progress!
-    </p>
-  </div>
-</div>
-
-<!-- Footer -->
-<div class="footer">
-  <h2>Copyright © 2022. Virtual Photobooth</h2>
-</div>
-<script type="text/javascript" src="index.js"></script>
-</body>
+            <p style="text-align: center;">
+               This virtual photo booth can customised. Work is in progress!
+            </p>
+         </div>
+      
+      <!-- Footer -->
+      <div class="footer">
+         <h2>Copyright © 2022. Virtual Photobooth</h2>
+      </div>
+      <script type="text/javascript" src="index.js"></script>
+   </body>
 </html>
-
-

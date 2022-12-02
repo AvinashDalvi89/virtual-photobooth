@@ -69,8 +69,7 @@ body {
 /* Main column */
 .main {
   flex: 70%;
-  background-color: white;
-  padding: 20px;
+  background-color: white; 
 }
 .column {
   flex: 25%;
@@ -121,20 +120,27 @@ video{
   text-align: center;
   background: #ddd;
 }
-
+/*** slider navigation **/
+.slider{ 
+  width: 71%;
+  margin-left: auto;
+  margin-right: auto; 
+}
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {
   .row, .navbar {   
     flex-direction: column;
   }
+  .side{
+    font-size: 11px;
+  }
+  .slider{
+    margin: 0px;
+    width: auto;
+  }
 }
 
-/*** slider navigation **/
-.slider{ 
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto; 
-}
+
 .slider-nav{
   width: 50%;
   margin-left: auto;
@@ -156,9 +162,7 @@ video{
   display: -webkit-box;
   display: flex;
 }
-.slider img {
-  
-  width: 206px; 
+.slider img { 
   display: none;
   -webkit-box-shadow: 10px 10px 20px 0 rgba(94,47,59,0.2);
   -moz-box-shadow: 10px 10px 20px 0 rgba(94,47,59,0.2);
@@ -244,10 +248,6 @@ to { opacity: 1; }
   flex-direction: column;
   align-items: center;
   flex: 1;
-
-  @media (max-width: 768px) {
-    font-size: 12px;
-  }
 }
 
 .stepper-item::before {
