@@ -9,6 +9,10 @@ var constraints = {
         facingMode: 'user'
     }
 }
+video.setAttribute('autoplay', '');
+video.setAttribute('muted', '');
+video.setAttribute('playsinline', '')
+
 function takeshot() {
   
     let div =
@@ -28,7 +32,7 @@ function takeshot() {
 }
 camera_button.addEventListener('click', async function() {
    	let stream = await navigator.mediaDevices.getUserMedia(constraints);
-	video.srcObject = stream;
+	  video.srcObject = stream;
 });
 camera_button.click();
 click_button.addEventListener('click', function() {
