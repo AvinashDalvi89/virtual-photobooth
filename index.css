@@ -100,10 +100,10 @@ video{
   font-size: 16px;
 }
 #click-photo {
-  background-color: #4CAF50; /* Green */
+  background-color: #004aad; /* Green */
 }
 #take-shot{
-  background-color: #4CAF50; /* Green */
+  background-color: #004aad; /* Green */
 }
 #canvas{
   object-fit: cover;
@@ -141,8 +141,7 @@ video{
 }
 
 
-.slider-nav{
-  width: 50%;
+.slider-nav{ 
   margin-left: auto;
   margin-right: auto;  
 }
@@ -174,7 +173,13 @@ video{
   -moz-animation: fadeImg 0.8s;
   animation: fadeImg 0.8s;
 }
-.slider-nav .arrow { flex: 0 0 15%; }
+.slider-nav .arrow { 
+  flex: 0 0 15%; 
+  padding: 11px;
+  background-color: #004aad;
+  margin-right: 9px; 
+  color: #FFF;
+}
 .slider-nav a {
   flex-basis: 100%;
   display: -webkit-box;
