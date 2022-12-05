@@ -1,0 +1,304 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header { 
+  text-align: center; 
+  color: white;
+}
+#logo {
+  width: 6em;
+  display: flex;
+  align-items: center;
+  margin-top: 7px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#logo img {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.header p{
+  color: #000;
+  margin-top: 0px;
+}
+/* Style the top navigation bar */
+.navbar {
+  display: flex;
+  background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 31%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+.column {
+  flex: 25%;
+  padding: 20px;
+}
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+video{ 
+  object-fit: cover;
+  /* margin-top: 82px;
+  margin-left: 6px;
+  padding: 10px; */
+  cursor: move;
+  width: 276px;
+  height: 303px;
+}
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+#click-photo {
+  background-color: #4CAF50; /* Green */
+}
+#take-shot{
+  background-color: #4CAF50; /* Green */
+}
+#canvas{
+  object-fit: cover;
+  /* margin-top: 82px;
+  margin-left: 6px;
+  padding: 10px; */
+  cursor: move;
+  width: 278px;
+  height: 305px;
+}
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row, .navbar {   
+    flex-direction: column;
+  }
+}
+
+/*** slider navigation **/
+.slider{ 
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto; 
+}
+.slider-nav{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;  
+}
+.slider-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+.slider-nav li {
+  -webkit-box-flex: 2;
+  flex: 2;
+  text-align: center;
+  display: -webkit-box;
+  display: flex;
+}
+.slider img {
+  
+  width: 206px; 
+  display: none;
+  -webkit-box-shadow: 10px 10px 20px 0 rgba(94,47,59,0.2);
+  -moz-box-shadow: 10px 10px 20px 0 rgba(94,47,59,0.2);
+  box-shadow: 10px 10px 20px 0 rgba(94,47,59,0.2);
+}
+.slider img.active {
+  display: block;
+  -webkit-animation: fadeImg 0.8s;
+  -moz-animation: fadeImg 0.8s;
+  animation: fadeImg 0.8s;
+}
+.slider-nav .arrow { flex: 0 0 15%; }
+.slider-nav a {
+  flex-basis: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.slider-nav span {
+  display: block;
+  width: 100%;
+}
+@-webkit-keyframes 
+fadeImg {  from {
+ opacity: 0;
+}
+to { opacity: 1; }
+}
+@-moz-keyframes 
+fadeImg {  from {
+ opacity: 0;
+}
+to { opacity: 1; }
+}
+@keyframes 
+fadeImg {  from {
+ opacity: 0;
+}
+to { opacity: 1; }
+}
+.clickframe{
+  text-align: center;
+}
+.viewframe{
+  text-align: center;
+}
+/** photoframe style **/
+
+.guide h2{
+  text-align: center;
+}
+
+.stepper-wrapper {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.stepper-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+}
+
+.stepper-item::before {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #ccc;
+  width: 100%;
+  top: 20px;
+  left: -50%;
+  z-index: 2;
+}
+
+.stepper-item::after {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #ccc;
+  width: 100%;
+  top: 20px;
+  left: 50%;
+  z-index: 2;
+}
+
+.stepper-item .step-counter {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ccc;
+  margin-bottom: 6px;
+}
+
+.stepper-item.active {
+  font-weight: bold;
+}
+
+.stepper-item.completed .step-counter {
+  background-color: #4bb543;
+}
+
+.stepper-item.completed::after {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #4bb543;
+  width: 100%;
+  top: 20px;
+  left: 50%;
+  z-index: 3;
+}
+
+.stepper-item:first-child::before {
+  content: none;
+}
+.stepper-item:last-child::after {
+  content: none;
+}
