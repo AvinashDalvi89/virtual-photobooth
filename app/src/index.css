@@ -1,24 +1,11 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
 * {
   box-sizing: border-box;
 }
 
 /* Style the body */
 body {
-  font-family: Arial;
+  font-family:'Open Sans', sans-serif;
   margin: 0;
 }
 
@@ -50,6 +37,7 @@ body {
 .navbar {
   display: flex;
   background-color: #333;
+  height: 4px;
 }
 
 /* Style the navigation bar links */
@@ -83,8 +71,7 @@ body {
 /* Main column */
 .main {
   flex: 70%;
-  background-color: white;
-  padding: 20px;
+  background-color: white; 
 }
 .column {
   flex: 25%;
@@ -98,12 +85,12 @@ body {
 }
 video{ 
   object-fit: cover;
-  /* margin-top: 82px;
+  margin-top: 82px;
   margin-left: 6px;
-  padding: 10px; */
+  padding: 10px;
   cursor: move;
-  width: 276px;
-  height: 303px;
+  width: 278px;
+  height: 305px;
 }
 .button {
   border: none;
@@ -115,16 +102,16 @@ video{
   font-size: 16px;
 }
 #click-photo {
-  background-color: #4CAF50; /* Green */
+  background-color: #004aad; /* Green */
 }
 #take-shot{
-  background-color: #4CAF50; /* Green */
+  background-color: #004aad; /* Green */
 }
 #canvas{
   object-fit: cover;
-  /* margin-top: 82px;
+  margin-top: 82px;
   margin-left: 6px;
-  padding: 10px; */
+  padding: 10px;
   cursor: move;
   width: 278px;
   height: 305px;
@@ -135,22 +122,13 @@ video{
   text-align: center;
   background: #ddd;
 }
-
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
-  .row, .navbar {   
-    flex-direction: column;
-  }
-}
-
 /*** slider navigation **/
 .slider{ 
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto; 
+  width: 71%;
+  margin-left: auto;
+  margin-right: auto; 
 }
-.slider-nav{
-  width: 50%;
+.slider-nav{ 
   margin-left: auto;
   margin-right: auto;  
 }
@@ -170,9 +148,7 @@ video{
   display: -webkit-box;
   display: flex;
 }
-.slider img {
-  
-  width: 206px; 
+.slider img { 
   display: none;
   -webkit-box-shadow: 10px 10px 20px 0 rgba(94,47,59,0.2);
   -moz-box-shadow: 10px 10px 20px 0 rgba(94,47,59,0.2);
@@ -184,7 +160,13 @@ video{
   -moz-animation: fadeImg 0.8s;
   animation: fadeImg 0.8s;
 }
-.slider-nav .arrow { flex: 0 0 15%; }
+.slider-nav .arrow { 
+  flex: 0 0 15%; 
+  padding: 11px;
+  background-color: #004aad;
+  margin-right: 9px; 
+  color: #FFF;
+}
 .slider-nav a {
   flex-basis: 100%;
   display: -webkit-box;
@@ -196,6 +178,25 @@ video{
   display: block;
   width: 100%;
 }
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row, .navbar {   
+    flex-direction: column;
+  }
+  .side{
+    font-size: 11px;
+  }
+  .slider{
+    margin: 0px;
+    width: auto;
+  }
+  .slider-nav .arrow{
+    flex: none;
+  }
+}
+
+
+
 @-webkit-keyframes 
 fadeImg {  from {
  opacity: 0;
@@ -220,8 +221,9 @@ to { opacity: 1; }
 .viewframe{
   text-align: center;
 }
-/** photoframe style **/
-
+h2{
+  text-transform: uppercase;
+}
 .guide h2{
   text-align: center;
 }
@@ -239,10 +241,6 @@ to { opacity: 1; }
   flex-direction: column;
   align-items: center;
   flex: 1;
-
-  @media (max-width: 768px) {
-    font-size: 12px;
-  }
 }
 
 .stepper-item::before {
@@ -283,13 +281,14 @@ to { opacity: 1; }
 }
 
 .stepper-item.completed .step-counter {
-  background-color: #4bb543;
+  background-color: #004aad;
+  color: #FFF;
 }
 
 .stepper-item.completed::after {
   position: absolute;
   content: "";
-  border-bottom: 2px solid #4bb543;
+  border-bottom: 2px solid #004aad;
   width: 100%;
   top: 20px;
   left: 50%;

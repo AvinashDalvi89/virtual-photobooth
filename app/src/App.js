@@ -59,7 +59,6 @@ function Router({user, signOut}) {
       <HashRouter>
           <div className={contentStyle}>
             <Header />
-            <hr className={dividerStyle} />
             <Switch>
               <Route exact path="/" >
                 <VirtualPhotobooth posts={posts} />
@@ -90,7 +89,6 @@ const dividerStyle = css`
 
 const contentStyle = css`
   min-height: calc(100vh - 45px);
-  padding: 0px 40px;
 `
 
 export default Router

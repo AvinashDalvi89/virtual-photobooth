@@ -6,13 +6,16 @@ import './index.css'
 export default function Header() {
   return (
     <div className={headerContainer}>
-      <Link to="/" className={linkStyle}>
+      
         <div>
-          <img className={logoStyle} alt="post" src={logo} />
-          <h1 className={headerStyle}>Virtual Photobooth | Click me & frame me !</h1>
+        <Link to="/" className={linkStyle}> <img className={logoStyle} alt="post" src={logo} />
+        </Link>
+          <p className={headerStyle}>Click me & frame me !</p>
         </div>
-      </Link>
+      
       {/* <Link to="/Admin" className={linkStyle}>Admin</Link> */}
+      <div class="navbar">
+      </div>
     </div>
   )
 }
@@ -24,6 +27,7 @@ const headerContainer = css`
 const headerStyle = css`
   font-size: 20px;
   margin-top: 0px;
+  text-align:center;
 `
 
 const linkStyle = css`
