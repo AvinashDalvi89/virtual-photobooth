@@ -118,7 +118,7 @@ export default function Post() {
           <div className="card-body" style={cameraMirorStyle}>
             <Webcam
               audio={false}
-              height={235}
+              height={240}
               screenshotFormat="image/jpeg"
               width={320}
               videoConstraints={videoConstraints}

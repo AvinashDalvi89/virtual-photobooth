@@ -21,7 +21,7 @@ export default function Header() {
 }
 
 const headerContainer = css`
-  padding-top: 20px;
+  padding-top: 5px;
 `
 
 const headerStyle = css`
