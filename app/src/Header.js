@@ -14,7 +14,7 @@ export default function Header() {
         </div>
       
       {/* <Link to="/Admin" className={linkStyle}>Admin</Link> */}
-      <div class="navbar">
+      <div className="navbar">
       </div>
     </div>
   )
