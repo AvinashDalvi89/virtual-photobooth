@@ -12,7 +12,7 @@ export default function Button({
 }
 
 const buttonStyle = type => css`
-  background-color: ${type === "action" ? "black" : "red"};
+  background-color: ${type === "action" ? "#004aad" : "red"};
   height: 40px;
   width: 160px;
   font-weight: 600;
@@ -22,7 +22,5 @@ const buttonStyle = type => css`
   border: none;
   margin-top: 5px;
   cursor: pointer;
-  \:hover {
-    background-color: #363636;
-  }
+  text-transform: uppercase;
 `
