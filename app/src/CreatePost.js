@@ -11,7 +11,8 @@ const initialState = {
   description: '',
   image: {},
   file: '',
-  saving: false
+  saving: false,
+  error:false
 };
 
 export default function CreatePost({
@@ -30,7 +31,10 @@ export default function CreatePost({
   /* 3. onChangeFile handler will be fired when a user uploads a file  */
   function onChangeFile(e) {
     e.persist();
-    if (! e.target.files[0]) return;
+    if (! e.target.files[0]) {
+      updateFormState(currentState => ({ ...currentState, saving: true }))
+      return
+    };
     const fileExtPosition = e.target.files[0].name.search(/.png|.jpg|.gif/i);
     const firstHalf = e.target.files[0].name.slice(0, fileExtPosition);
     const secondHalf = e.target.files[0].name.slice(fileExtPosition);
@@ -44,7 +48,10 @@ export default function CreatePost({
   async function save() {
     try {
       const { name, description,  image } = formState;
-      if (!name || !description  || !image.name) return;
+      if (!name || !description  || !image.name) {
+        updateFormState(currentState => ({ ...currentState, error: true }))
+        return
+      } ;
       updateFormState(currentState => ({ ...currentState, saving: true }));
       const postId = uuid();
       const postInfo = { name, description,  image: formState.image.name, id: postId };
@@ -64,7 +71,7 @@ export default function CreatePost({
   return (
     <div className={containerStyle}>
       <input
-        placeholder="Post name"
+        placeholder="Template name"
         name="name"
         className={inputStyle}
         onChange={onChangeText}
@@ -83,6 +90,7 @@ export default function CreatePost({
       <Button title="Create New Post" onClick={save} />
       <Button type="cancel" title="Cancel" onClick={() => updateOverlayVisibility(false)} />
       { formState.saving && <p className={savingMessageStyle}>Saving post...</p> }
+      { formState.error && <p className={errorMessageStyle}>Error saving, please enter name, description and image.</p> }
     </div>
   )
 }
@@ -120,5 +128,9 @@ const containerStyle = css`
 `
 
 const savingMessageStyle = css`
+  margin-bottom: 0px;
+`
+
+const errorMessageStyle = css`
   margin-bottom: 0px;
 `
