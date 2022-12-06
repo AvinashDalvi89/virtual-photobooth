@@ -10,12 +10,15 @@ export default function Posts({
     <>
       {
         posts.map(post => (
-          <Link to={`/post/${post.id}`} className={linkStyle} key={post.id}>
-            <div key={post.id} className={postContainer}>
-              <h1 className={postTitleStyle}>{post.name}</h1>
+          
+            <div key={post.id} className='column'>
+              <Link to={`/post/${post.id}`} className={linkStyle} key={post.id}>
+                <h1 className={postTitleStyle}>{post.name}</h1>
+              </Link>
+              <Link to={`/post/${post.id}`} className={linkStyle} key={post.id}>
               <img alt="post" className={imageStyle} src={post.image} />
-            </div>
-          </Link>
+              </Link>
+            </div> 
         ))
       }
     </>
@@ -31,17 +34,7 @@ const linkStyle = css`
   text-decoration: none;
 `
 
-const postContainer = css`
-  border-radius: 10px;
-  padding: 1px 20px;
-  border: 1px solid #ddd;
-  margin-bottom: 20px;
-  \:hover {
-    border-color: #0070f3;
-  }
-`
+ 
 
-const imageStyle = css`
-  width: 100%;
-  max-width: 400px;
+const imageStyle = css` 
 `

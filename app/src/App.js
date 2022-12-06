@@ -59,12 +59,14 @@ function Router({user, signOut}) {
     <>
       <HashRouter>
           <div className={contentStyle}>
-            <Header />
+            
             <Switch>
               <Route exact path="/" >
+              <Header />
                 <VirtualPhotobooth posts={posts} />
               </Route>
               <Route path="/post/:id" >
+              <Header />
                 <Post />
               </Route>
               <Route path="/admin" >

@@ -71,6 +71,8 @@ export default function CreatePost({
   return (
     <div className={containerStyle}>
       <h4 className={boxTitle}>Add frame for photobooth</h4>
+      { formState.saving && <p className={savingMessageStyle}>Saving post...</p> }
+      { formState.error && <p className={errorMessageStyle}>There was an error while saving; please enter the name, description, and image.</p> }
       <input
         placeholder="Template name"
         name="name"
@@ -90,8 +92,7 @@ export default function CreatePost({
       { formState.file && <img className={imageStyle} alt="preview" src={formState.file} /> }
       <Button title="Add" onClick={save} />
       <Button type="cancel" title="Cancel" onClick={() => updateOverlayVisibility(false)} />
-      { formState.saving && <p className={savingMessageStyle}>Saving post...</p> }
-      { formState.error && <p className={errorMessageStyle}>Error saving, please enter name, description and image.</p> }
+    
     </div>
   )
 }
@@ -131,14 +132,14 @@ const containerStyle = css`
 const savingMessageStyle = css`
   margin-bottom: 0px;
 `
-<<<<<<< HEAD
 
 const errorMessageStyle = css`
-  margin-bottom: 0px;
-=======
+color: red;
+margin-bottom: 15px;
+`
 const boxTitle = css`
 text-align: CENTER;
 background: #ccc;
 padding: 10px;
->>>>>>> 5332ed970560655e403812b50960acf894c3c486
 `
+ 
