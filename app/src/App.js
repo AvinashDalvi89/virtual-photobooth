@@ -13,6 +13,7 @@ import { listTemplates } from './graphql/queries';
 import Posts from './Posts';
 import Post from './Post';
 import Header from './Header';
+import Footer from "./Footer";
 import CreatePost from './CreatePost';
 import Admin from './Admin.js';
 import VirtualPhotobooth from './VirtualPhotobooth.js';
@@ -70,6 +71,7 @@ function Router({user, signOut}) {
                 <Admin />
               </Route>
             </Switch>
+            <Footer />
           </div>
         </HashRouter>
         { showOverlay && (

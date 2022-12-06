@@ -51,7 +51,7 @@ function Admin({ user, signOut }) {
     return (
         <>
             <div className={contentStyle}>
-                <Button className="button" title="New Post" onClick={() => updateOverlayVisibility(true)} />
+                <Button className="button" title="Add Frame" onClick={() => updateOverlayVisibility(true)} />
                 <Posts posts={posts} />
             </div>
             {showOverlay && (

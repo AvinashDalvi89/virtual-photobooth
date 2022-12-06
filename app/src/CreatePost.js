@@ -63,6 +63,7 @@ export default function CreatePost({
 
   return (
     <div className={containerStyle}>
+      <h4 className={boxTitle}>Add frame for photobooth</h4>
       <input
         placeholder="Post name"
         name="name"
@@ -80,7 +81,7 @@ export default function CreatePost({
         onChange={onChangeFile}
       />
       { formState.file && <img className={imageStyle} alt="preview" src={formState.file} /> }
-      <Button title="Create New Post" onClick={save} />
+      <Button title="Add" onClick={save} />
       <Button type="cancel" title="Cancel" onClick={() => updateOverlayVisibility(false)} />
       { formState.saving && <p className={savingMessageStyle}>Saving post...</p> }
     </div>
@@ -121,4 +122,9 @@ const containerStyle = css`
 
 const savingMessageStyle = css`
   margin-bottom: 0px;
+`
+const boxTitle = css`
+text-align: CENTER;
+background: #ccc;
+padding: 10px;
 `
