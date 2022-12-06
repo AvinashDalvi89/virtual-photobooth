@@ -161,6 +161,8 @@ export default function Post() {
 
 const titleStyle = css`
   margin-bottom: 7px;
+  text-align: center;
+  color: orange;
 `
 
 const locationStyle = css`
