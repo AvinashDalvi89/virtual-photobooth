@@ -12,12 +12,15 @@ export default function Posts({
         posts.map(post => (
           
             <div key={post.id} className='column'>
-              <Link to={`/post/${post.id}`} className={linkStyle} key={post.id}>
-                <h1 className={postTitleStyle}>{post.name}</h1>
-              </Link>
-              <Link to={`/post/${post.id}`} className={linkStyle} key={post.id}>
-              <img alt="post" className={imageStyle} src={post.image} />
-              </Link>
+              <div className='frame'>
+                <Link to={`/post/${post.id}`} className={linkStyle} key={post.id}>
+                  <h1 className={postTitleStyle}>{post.name}</h1>
+                </Link>
+                <Link to={`/post/${post.id}`} className={linkStyle} key={post.id}>
+                <img alt="post" className={imageStyle} src={post.image} />
+                </Link>
+              </div>
+             
             </div> 
         ))
       }

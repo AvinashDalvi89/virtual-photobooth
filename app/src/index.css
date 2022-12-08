@@ -53,7 +53,21 @@ body {
   background-color: #ddd;
   color: black;
 }
-
+.container{
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.frame{
+  width: 350px;
+    height: 513px;
+    margin: 2em auto;
+}
+.frame h1{
+  text-align: center;
+}
 /* Column container */
 .row {  
   display: flex;

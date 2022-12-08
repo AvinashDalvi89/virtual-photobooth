@@ -31,7 +31,12 @@ export default function virtualPhotobooth({
           </div>
         </div>
       </div>
-      <Posts posts={posts} />
+      <div className='container'>
+        <div className="row">
+          <Posts posts={posts} />
+        </div>
+      </div>
+    
     </>
   )
 }
