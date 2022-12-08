@@ -111,7 +111,8 @@ export default function Post() {
   return (
     <>
       <h1 className={titleStyle}>{post.name}</h1>
-      <div className="column clickframe" >
+      <div className='row'>
+  <div className="column clickframe" >
         <h2>Click your photo with frame</h2>
 
         <div className="framebg cardwp" id="card1" crossOrigin="anonymous" style={photoStyle}>
@@ -140,7 +141,7 @@ export default function Post() {
         {/* <button id="start-camera" onClick={cameraStart} >Start Camera</button> */}
         <button className="button" id="click-photo" onClick={clickPhoto}>Click Photo</button>
       </div>
-      {/* <div className="column viewframe">
+      {/* { <div className="column viewframe">
         <h2>Review & download photo</h2>
         <div id="bnophoto">
           <div className="card cardwop" id="photoframe" crossOrigin="anonymous" style={photoStyle}>
@@ -154,7 +155,9 @@ export default function Post() {
             </button>
           </div>
         </div>
-      </div> */}
+      </div>  } */}
+      </div>
+    
     </>
   )
 }
