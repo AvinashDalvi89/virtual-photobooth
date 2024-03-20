@@ -83,13 +83,14 @@ body {
   padding: 20px;
 }
 video{ 
-  object-fit: cover;
-  margin-top: 82px;
-  margin-left: 6px;
-  padding: 10px;
-  cursor: move;
-  width: 278px;
-  height: 305px;
+    object-fit: cover;
+    margin-top: 88px;
+    margin-left: -6px;
+    padding: 8px;
+    cursor: move;
+    width: 171px;
+    height: 171px;
+    border-radius: 171px;
 }
 .button {
   border: none;
@@ -107,13 +108,14 @@ video{
   background-color: #004aad; /* Green */
 }
 #canvas{
-  object-fit: cover;
-  margin-top: 82px;
-  margin-left: 6px;
-  padding: 10px;
-  cursor: move;
-  width: 278px;
-  height: 305px;
+     object-fit: cover;
+    margin-top: 88px;
+    margin-left: -6px;
+    padding: 8px;
+    cursor: move;
+    width: 171px;
+    height: 171px;
+    border-radius: 171px;
 }
 /* Footer */
 .footer {
