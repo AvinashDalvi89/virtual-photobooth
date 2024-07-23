@@ -6,5 +6,8 @@ To share photo with frame over social media.
 
 Click me & frame me!!!
 
+# How to use 
+Details blog link : https://www.internetkatta.com/why-i-build-virtual-photobooth-using-aws-amplify
+
 # Demo 
 https://main.dgqdyv9uzmpoc.amplifyapp.com/
