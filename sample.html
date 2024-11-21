@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" href="sample.css">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js">
+
+</script>
+<script src="canvas2image.js" ></script>
+  </head>
+  <body>
+    <header id="header" class="d-flex align-items-center header-scrolled">
+      <div class="container-fluid container-xxl d-flex align-items-center">
+  
+        <div id="logo" class="me-auto">
+          <a href="index.html" class="scrollto"><img src="images/VP-logo-transparent.png" alt="" title=""></a>
+        </div>
+  
+      
+      </div>
+    </header>
+   
+  
+    <div class="container-fluid ">
+      <div class="subtitle">
+        <h2>Click me & Frame me!</h2>
+      </div>
+        <div class="row" style="margin-top: 50px;">
+          <div class="column guide">
+              <img src="images/guide.png" />
+          </div>
+          <div class="column">
+            <div class="slider">
+              <img class="active" src="images/attending.png">
+              <img src="images/attending2.jpg">
+              <img src="images/30days-of-Amplify-VirtualPhotobooth.png">
+              ...
+            </div>
+            <nav class="slider-nav">
+              <ul>
+                <li class="arrow">
+                  <a class="previous">
+                    <span>
+                      <
+                    </span>
+                  </a>
+                </li>
+                <li class="arrow">
+                  <a class="next">
+                    <span>
+                      >
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!-- <div class="column">
+            <div class="framebg pure-img">
+              
+                <video id="video" width="200" height="200" autoplay></video> 
+              </div>
+          </div> -->
+        
+          <div id="photoframe" style="width:0;height:0;overflow: hidden">
+            <div class="framebg pure-img">
+                <canvas id="canvas" width="200" height="200" class="galleryImage"></canvas>
+              </div>
+          </div>
+        </div>
+      </div>
+ 
+
+
+
+    <script type="text/javascript" src="index.js"></script>
+
+  </body>
+</html>
