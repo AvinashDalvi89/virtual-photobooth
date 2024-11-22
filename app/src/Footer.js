@@ -8,7 +8,7 @@ export default function Footer() {
         <p>
             This virtual photo booth is inspired by the AWS community and dedicated to the AWS community. This can be customised. Work is in progress!
         </p>
-        <h2>Copyright © 2022. Virtual Photobooth</h2>
+        <h2>Copyright © 2024. Virtual Photobooth</h2>
       
     </div>
   )
